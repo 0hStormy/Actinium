@@ -1,0 +1,16 @@
+<div class="center">
+    <div class="vert">
+        <img src="img/logo.svg" alt="">
+        <span>Version: unknown</span>
+        <span id="storageQuotaSpan">Storage Quota:</span>
+        <a href="https://rotur.dev">
+            <img src="https://rotur.dev/rotur%20badge.png" height="20" alt="This OS supports rotur">
+        </a>
+    </div>
+</div>
+<script>
+    async function updateUsage() {
+        fromId("storageQuotaSpan").innerHTML = `Storage Quota: ${await fsGetUsage()}/${await fsGetQuota()}mb`;
+    }
+    updateUsage();
+</script>

@@ -1,0 +1,23 @@
+<div class="vert">
+    <div class="center">
+        <div class="vert">
+            <img class="big-icon" src="img/rotur.svg" alt="">
+            <span>
+                Welcome to the Rotur setup app.
+                This is where you will log into your Rotur account.
+                Rotur is used to connect with others across web operating systems!
+            </span>
+            <hr>
+            <h1>Login</h1>
+            <div class="hori">
+                <p>Username:</p>
+                <input type="text" name="" id="usernameInput">
+            </div>
+            <div class="hori">
+                <p>Password:</p>
+                <input type="password" name="" id="passwordInput">
+            </div>
+            <button onclick="console.log(roturLogin(fromId('usernameInput').value, fromId('passwordInput').value))">Login</button>
+        </div>
+    </div>
+</div>

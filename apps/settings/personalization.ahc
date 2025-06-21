@@ -1,0 +1,13 @@
+<div class="center">
+    <div class="vert">
+        <h2>Wallpaper</h2>
+        <input type="text" id="wallpaperInput">
+        <button onclick="changeWallpaper(fromId('wallpaperInput').value)">Apply</button>
+    </div>
+    <hr>
+    <h2>UI Roundness</h2>
+    <div class="vert">
+        <input type="range" min="0" max="16" value="8" class="slider" id="roundInput">
+        <button onclick="changeBorderRadius(fromId('roundInput').value)">Apply</button>
+    </div>
+</div>

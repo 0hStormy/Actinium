@@ -1,0 +1,63 @@
+<class>filer</class>
+<title>Filer</title>
+<icon>/bin/filer/icon.svg</icon>
+
+<max>
+<min>
+<close>
+<back>
+
+<div class="vert">
+    <input type="text">
+</div>
+<div id="filerGrid" class="grid"></div>
+<script>
+    currentPath = ""
+    fileList = []
+    
+    function changeDir(newPath) {
+        currentPath = currentPath.replace(/\/+$/, "");
+        if (newPath == "..") {
+            index = currentPath.lastIndexOf("/");
+            currentPath = currentPath.slice(0, index);
+        } else {
+            if (currentPath.endsWith("/")) {
+                currentPath += newPath;
+            } else {
+                currentPath += "/" + newPath;
+            }
+        }
+        ls();
+    }
+
+    async function ls() {
+        console.log(currentPath)
+        fileList = await fsls(currentPath)
+        document.getElementById("filerGrid").innerHTML = `
+        <div onclick="changeDir('..')" class="vert">
+            <img src="img/folder.svg" alt="">
+            <p>../</p>
+        </div>
+        `
+        for (let i = 0; i < fileList.length; i++) {
+            let newItem = document.createElement("div");
+            if (fileList[i].endsWith("/")) {
+                fileFolderIcon = "folder.svg";
+                click = `changeDir('${fileList[i]}');`
+            } else {
+                combinedPath = [currentPath, '/', fileList[i]].join('');
+                fileFolderIcon = "file.svg"
+                click = `newWindow('${combinedPath}')`
+            }
+            newItem.innerHTML = `
+            <div class="vert">
+                <img onclick="${click}" src="img/${fileFolderIcon}" alt="">
+                <p>${fileList[i]}</p>
+            </div>
+            `
+            document.getElementById("filerGrid").appendChild(newItem);
+        }
+    }
+    
+    ls();
+</script>

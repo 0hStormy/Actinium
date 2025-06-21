@@ -1,0 +1,15 @@
+<div class="center">
+    <div class="vert">
+        <div class="hori">
+            <span id="app-grid" class="material-symbols-outlined">warning</span>
+            <h1>Danger Zone!</h1>
+        </div>
+        <hr>
+        <h3>Manual Registry Editor</h3>
+        <div class="vert">
+            <textarea style="width: 480px; height: 320px;" name="" id=""></textarea>
+            <button>Apply</button>
+        </div>
+        <button onclick="createRegistry(); location.reload()">Reset System</button>
+    </div>
+</div>

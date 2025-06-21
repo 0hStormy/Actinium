@@ -1,0 +1,31 @@
+<div class="center">
+    <div class="vert">
+        <h1>Settings</h1>
+        <div class="full-ver">
+            <button onclick="replaceWindow('settings/user', main=false)">
+                <div class="hori">
+                    <span id="app-grid" class="material-symbols-outlined">person</span>
+                    <p>Rotur Account</p>
+                </div>
+            </button>
+            <button onclick="replaceWindow('settings/personalization', main=false)">
+                <div class="hori">
+                    <span id="app-grid" class="material-symbols-outlined">palette</span>
+                    <p>Personalization</p>
+                </div>
+            </button>
+            <button onclick="replaceWindow('settings/system', main=false)">
+                <div class="hori">
+                    <span id="app-grid" class="material-symbols-outlined">settings</span>
+                    <p>System</p>
+                </div>
+            </button>
+            <button onclick="replaceWindow('settings/about', main=false)">
+                <div class="hori">
+                    <span id="app-grid" class="material-symbols-outlined">info</span>
+                    <p>About</p>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>

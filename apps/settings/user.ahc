@@ -1,0 +1,9 @@
+<div class="vert">
+    <div class="center">
+        <div class="vert">
+            <img width="128px" src="img/unknown.svg" alt="">
+            <h1>Guest</h1>
+            <button onclick="replaceWindow('settings/rotur', main=false)">Login with Rotur</button>
+        </div>
+    </div>
+</div>
