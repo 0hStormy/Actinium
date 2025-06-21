@@ -1,12 +1,3 @@
-<class>filer</class>
-<title>Filer</title>
-<icon>/bin/filer/icon.svg</icon>
-
-<max>
-<min>
-<close>
-<back>
-
 <div class="vert">
     <input type="text">
 </div>
